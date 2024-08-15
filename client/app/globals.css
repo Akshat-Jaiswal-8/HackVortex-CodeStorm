@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.hero_square{
+  @apply bg-red-500;
+}
