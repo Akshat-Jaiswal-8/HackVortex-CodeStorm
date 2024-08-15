@@ -10,7 +10,7 @@ const font: NextFont = Poppins({
 
 export const Logo = () => {
   return (
-    <div className={cn("flex flex-col items-center gap-y-4", font.className)}>
+    <div className={cn("flex flex-col items-center gap-y-2", font.className)}>
       <div className="bg-white rounded-full p-1">
         <Image
           className={"rounded-full"}
@@ -20,9 +20,11 @@ export const Logo = () => {
           width={80}
         />
       </div>
-      <div className="flex flex-col items-center">
-        <p className="text-xl font-semibold">GameHub</p>
-        <p className="text-sm text-muted-foreground">Let&apos;s play</p>
+      <div className="flex flex-col items-center gap-y-2">
+        <p className="text-xl font-semibold">Mind Spark</p>
+        <p className="text-sm text-muted-foreground">
+          Interactive Learning for Bright Minds
+        </p>
       </div>
     </div>
   );
