@@ -1,6 +1,6 @@
 import React from "react";
 import { HoverEffect } from "@/components/ui/card-hover-effext";
-import { features } from "@/app/(home)/feature-data";
+import { features } from "@/app/(home)/_data/feature-data";
 import { motion } from "framer-motion";
 
 export const Features = () => {
@@ -23,7 +23,7 @@ export const Features = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 1,
+            delay: 0.4,
             duration: 0.8,
             ease: "easeInOut",
           }}

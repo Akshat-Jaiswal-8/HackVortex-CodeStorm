@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export const Hero = () => {
+export const Hero = (): React.JSX.Element => {
   return (
     <div>
       <motion.div
@@ -25,11 +25,13 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.25 }}
             className={"grid-cols-1 flex flex-col gap-y-12 items-start "}
           >
-            <h1 className={"text-7xl"}>Spark Curiosity, Ignite Learning</h1>
-            <h2 className={"text-3xl"}>
+            <h1 className={"text-7xl font-semibold py-4 text-slate-200"}>
+              Spark Curiosity, Ignite Learning
+            </h1>
+            <h2 className={"text-3xl font-semibold text-slate-300"}>
               Interactive quizzes that make learning fun for young minds
             </h2>
-            <p className={"text-xl"}>
+            <p className={"text-xl font-normal text-slate-300"}>
               MindSpark offers engaging daily quizzes, voice-based questions,
               and exciting rewards to keep young learners motivated and excited
               about education.
@@ -53,7 +55,6 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <Image
-              className={"animate-[wiggle_1s_ease-in-out_infinite]"}
               src={"/hero.svg"}
               alt={"hero svg"}
               height={600}
