@@ -1,0 +1,125 @@
+[
+    {
+        "question": "What is the length of the train?",
+        "options": [
+            "120 metres",
+            "180 metres",
+            "324 metres",
+            "150 metres"
+        ],
+        "answer": "150 metres"
+    },
+    {
+        "question": "A train 125 m long passes a man, running at 5 km/hr in the same direction in which the train is going, in 10 seconds. The speed of the train is:",
+        "options": [
+            "45 km/hr",
+            "50 km/hr",
+            "54 km/hr",
+            "55 km/hr"
+        ],
+        "answer": "50 km/hr"
+    },
+    {
+        "question": "The length of the bridge, which a train 130 metres long and travelling at 45 km/hr can cross in 30 seconds, is:",
+        "options": [
+            "200 m",
+            "225 m",
+            "245 m",
+            "250 m"
+        ],
+        "answer": "245 m"
+    },
+    {
+        "question":"A train is running at a speed of 100Kmph. A car is running on road parallel to the train’s track at a speed of 20 Kmph opposite to train. How much time will it take to cross the car if the length of the train is 100 meters?",
+        "options":[
+            "5 sec",
+            "4 sec",
+            "3 sec",
+            "3.5 sec"
+        ],
+        "answer":"3 sec"
+    },
+    {
+        "question":"A boatman takes 3 hours 45 minutes to travel 15 km downstream and takes 2 hours 30 minutes to travel 5 km upstream of a river. What is the speed of the stream of the river in km/h?",
+        "options":[
+            "2 km/h",
+            "1 km/h",
+            "6 km/h",
+            "4 km/h"
+        ],
+        "answer":"1 km/h"
+    },
+    {
+        "question":"A speedboat runs 6 km upstream in a river and comes back to the starting point in 33 minutes. The stream of the river is running at 2 km/hr. What is the speed of speedboat in still water?",
+        "options":[ 
+            "25 km/h", 
+            "21 km/h", 
+            "26 km/h", 
+            "22 km/h"
+        ],
+        "answer":"22 km/h"
+    },
+    {
+        "question":"A boat runs at the speed of 13 km/h in still water. If the speed of the stream is 4 km/h, how much time will it take to go 68 km downstream?",
+        "options":[
+            "5 h",
+            "4 h",
+            "6 h",
+            "3 h"
+        ],
+        "answer":"4 h"
+    },
+    {
+        "question":"A train is running at a speed of 100Kmph. A car is running on road parallel to the train’s track at a speed of 20 Kmph opposite to train. How much time will it take to cross the car if the length of the train is 100 meters?",
+        "options":[
+            "5 sec",
+            "4 sec",
+            "3 sec",
+            "3.5 sec"
+        ],
+        "answer":"3 sec"
+    },
+    {
+        "question":"Express 252 as a product of primes.",
+        "options":[
+            "2 * 2 * 3 * 3 * 7",
+            "3* 3 * 3 * 3 * 7",
+            "2 * 2 * 2* 3 * 7",
+            "2 * 3 * 3 * 3 * 7"
+        ],
+        "answer":"2 * 2 * 3 * 3 * 7"
+    },
+    {
+        "question":"Find the highest common factor of the following numbers: 4 * 27 * 3125, 8 * 9 * 25 * 7, 16 * 81 * 5 * 11 * 49",
+        "options":[
+            "180",
+            "360",
+            "540",
+            "1260"
+        ],
+        "answer":"180"
+    },
+    {
+        "question":"Calculate the HCF of 1.08, 0.36 and 0.9.",
+        "options":[
+            "0.03","0.9","0.18","0.108"
+        ],
+        "answer":"0.18"
+    },
+    {
+        "question":"Three numbers are in the ratio 1:2:3 and their HCF is 12. The numbers are:",
+        "options":[
+            "4, 8, 12",
+            "5, 10, 15",
+            "10, 20, 30",
+            "12, 24, 36"
+        ],
+        "answer":"12, 24, 36"
+    },
+    {
+        "question":"The sum if two numbers is 528 and their HCF is 33. The number of pairs of numbers satisfying the above condition is:",
+        "options":[
+            "4","6","8","12"
+        ]
+    }
+]
