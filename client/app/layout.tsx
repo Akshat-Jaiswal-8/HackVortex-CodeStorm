@@ -29,7 +29,7 @@ export default function RootLayout({
           baseTheme: [dark, neobrutalism],
         }}
       >
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en">
           <body className={poppins.className}>
             <ThemeProvider
               attribute="class"
