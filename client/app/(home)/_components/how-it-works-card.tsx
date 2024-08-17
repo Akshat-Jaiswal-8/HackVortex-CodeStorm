@@ -9,15 +9,17 @@ import {
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+interface HowItWorksCardProps {
+  heading: string;
+  description: string;
+  image: any;
+}
+
 export const HowItWorksCard = ({
   heading,
   description,
   image,
-}: {
-  heading: string;
-  description: string;
-  image: any;
-}) => {
+}: HowItWorksCardProps): React.JSX.Element => {
   return (
     <motion.div
       initial={{ opacity: 0, x: 20, y: 0 }}
@@ -28,9 +30,13 @@ export const HowItWorksCard = ({
         ease: "easeInOut",
       }}
     >
-      <Card>
+      <Card className={"w-3/4 mx-auto"}>
         <CardContent>
-          <Image src={image} alt={`${image}-image`} className={"w-50 h-50"} />
+          <Image
+            src={image}
+            alt={`${image}-image`}
+            className={"min-w-80 min-h-80 "}
+          />
         </CardContent>
         <CardHeader>
           <CardTitle>{heading}</CardTitle>

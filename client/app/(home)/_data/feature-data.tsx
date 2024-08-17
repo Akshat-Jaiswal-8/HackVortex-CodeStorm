@@ -17,7 +17,7 @@ interface FeatureDataProps {
 
 export const features: FeatureDataProps[] = [
   {
-    title: "Interactive Quiz Cards",
+    title: "Interactive quiz Cards",
     icon: <CreditCard color="#00aaff" strokeWidth={1.25} absoluteStrokeWidth />,
     description:
       "Colorful, easy-to-navigate question cards that make learning feel like a game.",

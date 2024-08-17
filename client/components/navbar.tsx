@@ -23,7 +23,11 @@ export const Navbar = async (): Promise<React.JSX.Element> => {
       <div className={"flex items-center gap-x-6"}>
         {!user && (
           <SignInButton>
-            <Button>Login</Button>
+            <Button
+              className={"bg-blue-700 dark:text-white dark:hover:bg-blue-900"}
+            >
+              Login
+            </Button>
           </SignInButton>
         )}
         <UserButton />

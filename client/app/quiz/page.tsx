@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { data } from "../data/Data";
+import { data } from "@/app/_data/Data";
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState("");

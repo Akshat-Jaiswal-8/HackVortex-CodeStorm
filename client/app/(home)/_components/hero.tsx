@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Hero = (): React.JSX.Element => {
   return (
@@ -36,13 +37,15 @@ export const Hero = (): React.JSX.Element => {
               and exciting rewards to keep young learners motivated and excited
               about education.
             </p>
-            <Button
-              className={
-                "bg-blue-700 dark:text-white dark:hover:bg-blue-900 w-1/3"
-              }
-            >
-              Start Now
-            </Button>
+            <Link href={"/quiz"}>
+              <Button
+                className={
+                  "text-lg text-slate-300 bg-blue-700 dark:text-white dark:hover:bg-blue-900 p-4"
+                }
+              >
+                Start for free!
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div

@@ -2,17 +2,18 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
-export const HoverEffect = ({
-  items,
-  className,
-}: {
-  items: {
-    title: string;
-    icon: React.JSX.Element;
-    description: string;
-  }[];
+type item = {
+  title: string;
+  icon: React.JSX.Element;
+  description: string;
+};
+
+interface HoverEffectProps {
+  items: item[];
   className?: string;
-}) => {
+}
+
+export const HoverEffect = ({ items, className }: HoverEffectProps) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -22,7 +23,7 @@ export const HoverEffect = ({
         className,
       )}
     >
-      {items.map((item, idx) => (
+      {items.map((item: item, idx: number) => (
         <div
           key={item?.title}
           className="relative group block p-2 h-full w-full"
@@ -65,7 +66,7 @@ export const Card = ({
 }: {
   className?: string;
   children: React.ReactNode;
-}) => {
+}): React.JSX.Element => {
   return (
     <div
       className={cn(
@@ -85,7 +86,7 @@ export const CardTitle = ({
 }: {
   className?: string;
   children: React.ReactNode;
-}) => {
+}): React.JSX.Element => {
   return (
     <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
       {children}
@@ -98,7 +99,7 @@ export const CardDescription = ({
 }: {
   className?: string;
   children: React.ReactNode;
-}) => {
+}): React.JSX.Element => {
   return (
     <p
       className={cn(
