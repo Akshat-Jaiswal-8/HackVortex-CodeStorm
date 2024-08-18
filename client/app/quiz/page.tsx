@@ -5,17 +5,27 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { generalKnowledge, generalKnowledgeProps } from "@/app/_data/Data";
 import { Button } from "@/components/ui/button"; // Assuming you have a Button component
 import { motion } from "framer-motion";
+import { GkStore, useGkStore } from "@/lib/store";
 
 const Quiz = (): React.ReactNode => {
+  const increaseScore = useGkStore((state: GkStore) => state.increaseScore);
+
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<string>("");
+  const [answers, setAnswers] = useState<string[]>(
+    Array(generalKnowledge.length).fill(""),
+  );
   const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
 
   const handleNextQuestion = (): void => {
+    if (
+      generalKnowledge[currentQuestion]["correct"] === answers[currentQuestion]
+    ) {
+      increaseScore();
+    }
+
     if (currentQuestion < generalKnowledge.length - 1) {
       paginate(1);
       setCurrentQuestion(currentQuestion + 1);
-      setSelectedAnswer("");
     }
   };
 
@@ -23,8 +33,13 @@ const Quiz = (): React.ReactNode => {
     if (currentQuestion > 0) {
       paginate(-1);
       setCurrentQuestion(currentQuestion - 1);
-      setSelectedAnswer("");
     }
+  };
+
+  const handleAnswerChange = (answer: string): void => {
+    const newAnswers = [...answers];
+    newAnswers[currentQuestion] = answer;
+    setAnswers(newAnswers);
   };
 
   const paginate = (newDirection: number): void => {
@@ -32,6 +47,7 @@ const Quiz = (): React.ReactNode => {
   };
 
   const currentQuiz: generalKnowledgeProps = generalKnowledge[currentQuestion];
+
   const variants = {
     enter: (direction: number) => {
       return {
@@ -83,8 +99,8 @@ const Quiz = (): React.ReactNode => {
               <Checkbox
                 className="text-2xl"
                 id={`${answer}`}
-                checked={selectedAnswer === answer}
-                onCheckedChange={() => setSelectedAnswer(answer)}
+                checked={answers[currentQuestion] === answer}
+                onCheckedChange={() => handleAnswerChange(answer)}
               />
               <Label className="text-2xl font-semibold" htmlFor={`${answer}`}>
                 {answer}

@@ -12,7 +12,7 @@ import quiz from "@/public/quiz.svg";
 import topic from "@/public/topic-selection.svg";
 import feedback from "@/public/emotional-feedback-concept-illustration.png";
 
-interface HowItWorksProps {
+export interface HowItWorksProps {
   step: number;
   heading: string;
   icon: React.JSX.Element;

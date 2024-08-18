@@ -2,7 +2,7 @@ import React from "react";
 import { QuestionsPalette } from "@/app/quiz/_components/QuestionsPalette";
 import { CurrentScore } from "@/app/quiz/_components/currentScore";
 
-export const Sidebar = () => {
+export const Sidebar = (): React.ReactNode => {
   return (
     <div
       className={

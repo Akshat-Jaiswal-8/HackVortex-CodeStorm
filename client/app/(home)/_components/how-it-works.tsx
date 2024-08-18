@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { howItWorksData } from "@/app/(home)/_data/how-it-works-data";
+import {
+  howItWorksData,
+  HowItWorksProps,
+} from "@/app/(home)/_data/how-it-works-data";
 import { HowItWorksCard } from "@/app/(home)/_components/how-it-works-card";
 
 export const HowItWorks = () => {
@@ -20,12 +23,14 @@ export const HowItWorks = () => {
           Your journey to interactive learning in 5 simple steps
         </motion.h1>
         <motion.div className={"grid grid-cols-2 gap-40"}>
-          {howItWorksData.map((data) => (
-            <HowItWorksCard
-              heading={data.heading}
-              description={data.description}
-              image={data.svg}
-            />
+          {howItWorksData.map((data: HowItWorksProps) => (
+            <div key={data.step}>
+              <HowItWorksCard
+                heading={data.heading}
+                description={data.description}
+                image={data.svg}
+              />
+            </div>
           ))}
         </motion.div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { generalKnowledge, generalKnowledgeProps } from "@/app/_data/Data";
 
-export const QuestionsPalette = () => {
+export const QuestionsPalette = (): React.ReactNode => {
   return (
     <div>
       <h1 className={"text-slate-300 text-4xl font-semibold pl-2 py-4"}>
