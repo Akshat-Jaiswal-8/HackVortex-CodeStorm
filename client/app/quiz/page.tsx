@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { generalKnowledge, generalKnowledgeProps } from "@/app/_data/Data";
-import { Button } from "@/components/ui/button"; // Assuming you have a Button component
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { GkStore, useGkStore } from "@/lib/store";
 
