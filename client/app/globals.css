@@ -67,3 +67,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.container {
+  overflow: hidden; /* Hide the scrollbar */
+  overflow-y: scroll; /* Still allow vertical scrolling */
+}
+
