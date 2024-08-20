@@ -58,6 +58,125 @@
             "No error."
         ],
         "answer": "I could not put up at a hotel"
+    },
+    {
+        "question":"Choose the incorrectly spelt word among all the given options.",
+        "options": [
+            "Acquaintance",
+            "Maneouvre",
+            "Erroneously",
+            "Demurrage"
+        ],
+        "answer": "Maneouvre"
+    },
+    {
+        "question":"Choose the incorrectly spelt word among all the given options.",
+        "options":[
+            "Strategy",
+            "Strenth",
+            "Strictly",
+            "Stretch"
+        ],
+        "answer":"Strenth"
+    },
+    {
+        "question": "When he P : did not know Q : he was nervous and R : heard the hue and cry at midnight S : what to do. The Proper sequence should be:",
+        "options": [
+            "RQPS",
+            "QSPR",
+            "SQPR",
+            "PQRS"
+        ],
+        "answer": "RQPS"
+    },
+    {
+        "question": "It has been established that P : Einstein was Q : although a great scientist R : weak in arithmetic S : right from his school days. The Proper sequence should be:",
+        "options": [
+            "SRPQ",
+            "QPRS",
+            "QPSR",
+            "RQPS"
+        ],
+        "answer": "SRPQ"
+    },
+    {
+        "question": "Then P : it struck me Q : of course R : suitable it was S : how eminently. The Proper sequence should be:",
+        "options": [
+            "SPQR",
+            "QSRP",
+            "PSRQ",
+            "QPSR"
+        ],
+        "answer": "SPQR"
+    },
+    {
+        "question": "After driving professor Kumar to the museum she dropped him at his hotel. What is its passive voice?",
+        "options": [
+            "After being driven to the museum, Professor Kumar was dropped at his hotel.",
+            "Professor Kumar was being driven dropped at his hotel.",
+            "After she had driven Professor Kumar to the museum she had dropped him at his hotel.",
+            "After she was driven Professor Kumar to the museum she had dropped him at his hotel."
+        ],
+        "answer": "After being driven to the museum, Professor Kumar was dropped at his hotel."
+    },
+    {
+        "question": "I remember my sister taking me to the museum. What is its passive voice?",
+        "options": [
+            "I remember I was taken to the museum by my sister.",
+            "I remember being taken to the museum by my sister.",
+            "I remember myself being taken to the museum by my sister.",
+            "I remember taken to the museum by my sister."
+        ],
+        "answer": "I remember being taken to the museum by my sister."
+    },
+    {
+        "question": "They greet me cheerfully every morning. What is its passive voice?",
+        "options": [
+            "Every morning I was greeted cheerfully.",
+            "I am greeted cheerfully by them every morning.",
+            "I am being greeted cheerfully by them every morning.",
+            "Cheerful greeting is done by them every morning to me."
+        ],
+        "answer": "I am greeted cheerfully by them every morning."
+    },
+    {
+        "question": "Darjeeling grows tea. What is its passive voice?",
+        "options": [
+            "Tea is being grown in Darjeeling.",
+            "Let the tea be grown in Darjeeling.",
+            "Tea is grown in Darjeeling.",
+            "Tea grows in Darjeeling."
+        ],
+        "answer": "Tea is grown in Darjeeling."
+    },
+    {
+        "question": "If you don't keep quiet I shall shoot you, he said to her in a calm voice. Choose the corresponding indirect speech.",
+        "options": [
+            "He warned her to shoot if she didn't keep quiet calmly.",
+            "He said calmly that I shall shoot you if you don't be quiet.",
+            "He warned her calmly that he would shoot her if she didn't keep quiet.",
+            "Calmly he warned her that be quiet or else he will have to shoot her."
+        ],
+        "answer": "He warned her calmly that he would shoot her if she didn't keep quiet."
+    },
+    {
+        "question": "I told him that he was not working hard. Pick the appropriate direct sentence.",
+        "options": [
+            "I said to him, You are not working hard.",
+            "I told to him, You are not working hard.",
+            "I said, You are not working hard.",
+            "I said to him, He is not working hard."
+        ],
+        "answer": "I said to him, You are not working hard."
+    },
+    {
+        "question": "His father ordered him to go to his room and study. Choose the corresponding direct speech.",
+        "options": [
+            "His father said, Go to your room and study.",
+            "His father said to him, Go and study in your room.",
+            "His father shouted, Go right now to your study room.",
+            "His father said firmly, Go and study in your room."
+        ],
+        "answer": "His father said, Go to your room and study."
     }
-       
 ]
