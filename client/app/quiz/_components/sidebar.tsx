@@ -1,6 +1,7 @@
 import React from "react";
 import { QuestionsPalette } from "@/app/quiz/_components/QuestionsPalette";
 import { CurrentScore } from "@/app/quiz/_components/currentScore";
+import Timer from "./timer";
 import { quizDataProps } from "@/types/quiz-data";
 
 interface SidebarProps {
@@ -15,6 +16,7 @@ export const Sidebar = ({ data }: SidebarProps): React.ReactNode => {
       }
     >
       <CurrentScore />
+      <Timer />
       <QuestionsPalette data={data} />
     </div>
   );
