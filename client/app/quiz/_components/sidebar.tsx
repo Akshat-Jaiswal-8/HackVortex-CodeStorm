@@ -2,8 +2,13 @@ import React from "react";
 import { QuestionsPalette } from "@/app/quiz/_components/QuestionsPalette";
 import { CurrentScore } from "@/app/quiz/_components/currentScore";
 import Timer from "./timer";
+import { quizDataProps } from "@/types/quiz-data";
 
-export const Sidebar = (): React.ReactNode => {
+interface SidebarProps {
+  data: quizDataProps[];
+}
+
+export const Sidebar = ({ data }: SidebarProps): React.ReactNode => {
   return (
     <div
       className={
@@ -12,7 +17,7 @@ export const Sidebar = (): React.ReactNode => {
     >
       <CurrentScore />
       <Timer />
-      <QuestionsPalette />
+      <QuestionsPalette data={data} />
     </div>
   );
 };

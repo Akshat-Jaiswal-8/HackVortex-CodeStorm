@@ -1,10 +1,6 @@
-export interface generalKnowledgeProps {
-  question: string;
-  answers: string[];
-  correct: string;
-}
+import { quizDataProps } from "@/types/quiz-data";
 
-export const generalKnowledge: generalKnowledgeProps[] = [
+export const generalKnowledge: quizDataProps[] = [
   {
     question: "In which country did the ancient Olympic Games originate?",
     answers: ["Greece", "Rome", "Egypt", "China"],

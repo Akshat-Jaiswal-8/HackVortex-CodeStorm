@@ -2,7 +2,7 @@
 import React, { useCallback } from "react";
 import { Quiz } from "@/app/quiz/_components/quiz";
 import { DataStore, useDataStore } from "@/lib/store";
-import { generalKnowledge } from "@/app/_data/general-knowledge-data";
+import { computerScience } from "@/app/_data/computer-science";
 import { Sidebar } from "@/app/quiz/_components/sidebar";
 
 const Page = () => {
@@ -13,8 +13,8 @@ const Page = () => {
 
   return (
     <>
-      <Sidebar data={generalKnowledge} />
-      <Quiz data={generalKnowledge} onScoreIncrease={handleScoreIncrease} />
+      <Sidebar data={computerScience} />
+      <Quiz data={computerScience} onScoreIncrease={handleScoreIncrease} />
     </>
   );
 };

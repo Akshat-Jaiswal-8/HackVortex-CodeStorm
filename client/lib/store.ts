@@ -1,6 +1,6 @@
-import { create } from "zustand";
+import { create, StoreApi, UseBoundStore } from "zustand";
 
-export interface GkStore {
+export interface DataStore {
   score: number;
   isCorrect: boolean | null;
   correctAnswers: Set<number>;
@@ -13,26 +13,38 @@ export interface GkStore {
   increaseScore: () => void;
 }
 
-export const useGkStore = create<GkStore>()((set) => ({
-  score: 0,
-  isCorrect: null,
-  correctAnswers: new Set(),
-  isWrong: null,
-  wrongAnswers: new Set(),
-  skippedQuestions: new Set(),
-  setSkipped: (questionIndex: number) =>
-    set((state) => ({
-      skippedQuestions: new Set(state.skippedQuestions).add(questionIndex),
-    })),
-  setCorrect: (questionIndex: number) =>
-    set((state) => ({
-      isCorrect: true,
-      correctAnswers: new Set(state.correctAnswers).add(questionIndex),
-    })),
-  setWrong: (questionIndex: number) =>
-    set((state) => ({
-      isWrong: true,
-      wrongAnswers: new Set(state.wrongAnswers).add(questionIndex),
-    })),
-  increaseScore: () => set((state: GkStore) => ({ score: state.score + 1 })),
-}));
+export const useDataStore: UseBoundStore<StoreApi<DataStore>> =
+  create<DataStore>()((set) => ({
+    score: 0,
+    isCorrect: null,
+    correctAnswers: new Set(),
+    isWrong: null,
+    wrongAnswers: new Set(),
+    skippedQuestions: new Set(),
+    setSkipped: (questionIndex: number) =>
+      set((state: DataStore): { skippedQuestions: Set<number> } => ({
+        skippedQuestions: new Set(state.skippedQuestions).add(questionIndex),
+      })),
+    setCorrect: (questionIndex: number) =>
+      set(
+        (
+          state: DataStore,
+        ): { isCorrect: boolean; correctAnswers: Set<number> } => ({
+          isCorrect: true,
+          correctAnswers: new Set(state.correctAnswers).add(questionIndex),
+        }),
+      ),
+    setWrong: (questionIndex: number) =>
+      set(
+        (
+          state: DataStore,
+        ): { isWrong: boolean; wrongAnswers: Set<number> } => ({
+          isWrong: true,
+          wrongAnswers: new Set(state.wrongAnswers).add(questionIndex),
+        }),
+      ),
+    increaseScore: () =>
+      set((state: DataStore): { score: number } => ({
+        score: state.score + 1,
+      })),
+  }));

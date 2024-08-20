@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { GkStore, useGkStore } from "@/lib/store";
+import { DataStore, useDataStore } from "@/lib/store";
 
 export const CurrentScore = (): React.ReactNode => {
-  const score: number = useGkStore((state: GkStore) => state.score);
+  const score: number = useDataStore((state: DataStore) => state.score);
 
   return (
     <h1 className={"text-slate-300 text-4xl font-semibold pl-2 py-4 border-b"}>
