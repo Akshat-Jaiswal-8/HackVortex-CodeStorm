@@ -1,23 +1,30 @@
 "use client";
 import React from "react";
-import { generalKnowledge, generalKnowledgeProps } from "@/app/_data/Data";
-import { useGkStore } from "@/lib/store";
-import { number } from "prop-types";
+import { DataStore, useDataStore } from "@/lib/store";
+import { quizDataProps } from "@/types/quiz-data";
 
-export const QuestionsPalette = (): React.ReactNode => {
-  const correctAnswers: Set<number> = useGkStore(
-    (state) => state.correctAnswers,
+interface QuestionsPaletteProps {
+  data: quizDataProps[];
+}
+
+export const QuestionsPalette = ({
+  data,
+}: QuestionsPaletteProps): React.ReactNode => {
+  const correctAnswers: Set<number> = useDataStore(
+    (state: DataStore) => state.correctAnswers,
   );
-  const wrongAnswers: Set<number> = useGkStore((state) => state.wrongAnswers);
-  const skippedQuestions: Set<number> = useGkStore(
-    (state) => state.skippedQuestions,
+  const wrongAnswers: Set<number> = useDataStore(
+    (state: DataStore) => state.wrongAnswers,
+  );
+  const skippedQuestions: Set<number> = useDataStore(
+    (state: DataStore) => state.skippedQuestions,
   );
   return (
     <div>
       <h1 className={"text-slate-300 text-4xl font-semibold pl-2 py-4"}>
         Questions
       </h1>
-      {generalKnowledge.map((gk: generalKnowledgeProps, index: number) => {
+      {data.map((eachData: quizDataProps, index: number) => {
         return (
           <div
             key={index}
@@ -31,9 +38,9 @@ export const QuestionsPalette = (): React.ReactNode => {
               <span
                 className={`mr-2 ${correctAnswers.has(index) ? "text-white" : "text-green-500"}`}
               >
-                {`Ques-${index}`}
+                {`Ques-${index + 1}`}
               </span>
-              {gk.question}
+              {eachData.question}
             </div>
           </div>
         );
