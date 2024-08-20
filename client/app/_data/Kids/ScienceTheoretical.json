@@ -42,5 +42,29 @@
     {
         "question": "Which ocean is the largest?",
         "answer": "Pacific Ocean"
+    },
+    {
+        "question": "Name those states of India which have the Tropic of Cancer passing through them.",
+        "answer": "In India Tropic of Cancer passes through 8 states. Rajasthan, Gujarat, Madhya Pradesh,Chhattisgarh, Jharkhand,West Bengal,Tripura and Mizoram."
+    },
+    {
+        "question":"Where do snow, sand, and sea meet?",
+        "answer":"Hokkaido beach in Japan where snow, sand and sea meet each other."
+    },
+    {
+        "question": "What is the chemical symbol for gold?",
+        "answer": "Au"
+    },
+    {
+        "question": "Which element has the atomic number 1?",
+        "answer": "Hydrogen"
+    },
+    {
+        "question": "Who is known as the 'Father of the Indian Constitution'?",
+        "answer": "Dr. B.R. Ambedkar"
+    },
+    {
+        "question": "Which country hosted the 2020 Summer Olympics?",
+        "answer": "Japan (held in 2021 due to the pandemic)"
     }
 ]
