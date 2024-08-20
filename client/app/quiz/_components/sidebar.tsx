@@ -1,6 +1,7 @@
 import React from "react";
 import { QuestionsPalette } from "@/app/quiz/_components/QuestionsPalette";
 import { CurrentScore } from "@/app/quiz/_components/currentScore";
+import Timer from "./timer";
 
 export const Sidebar = (): React.ReactNode => {
   return (
@@ -10,6 +11,7 @@ export const Sidebar = (): React.ReactNode => {
       }
     >
       <CurrentScore />
+      <Timer />
       <QuestionsPalette />
     </div>
   );

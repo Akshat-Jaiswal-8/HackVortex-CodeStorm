@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { quizCategories } from "@/app/(home)/_data/quiz-categories";
 
 export const Hero = (): React.JSX.Element => {
   return (
@@ -21,10 +22,10 @@ export const Hero = (): React.JSX.Element => {
               hidden: { opacity: 0, x: -20, y: 40 },
               visible: { opacity: 1, x: 0, y: 0 },
             }}
-            initial={"hidden"}
-            animate={"visible"}
+            initial="hidden"
+            animate="visible"
             transition={{ duration: 0.5, delay: 0.25 }}
-            className={"grid-cols-1 flex flex-col gap-y-12 items-start "}
+            className="flex flex-col gap-y-12 items-start"
           >
             <h1 className={"text-7xl font-semibold py-4 text-slate-200"}>
               Spark Curiosity, Ignite Learning
@@ -37,15 +38,26 @@ export const Hero = (): React.JSX.Element => {
               and exciting rewards to keep young learners motivated and excited
               about education.
             </p>
-            <Link href={"/quiz"}>
-              <Button
-                className={
-                  "text-lg text-slate-300 bg-blue-700 dark:text-white dark:hover:bg-blue-900 p-4"
-                }
-              >
-                Start for free!
-              </Button>
-            </Link>
+            <div className="flex gap-x-4">
+              <Link href={"/quiz/professional"}>
+                <Button
+                  className={
+                    "text-lg text-slate-300 bg-blue-700 dark:text-white dark:hover:bg-blue-900 p-4"
+                  }
+                >
+                  Professional
+                </Button>
+              </Link>
+              <Link href={"/quiz/kids"}>
+                <Button
+                  className={
+                    "text-lg text-slate-300 bg-blue-700 dark:text-white dark:hover:bg-blue-900 p-4"
+                  }
+                >
+                  Kids
+                </Button>
+              </Link>
+            </div>
           </motion.div>
 
           <motion.div
