@@ -1,19 +1,17 @@
 "use client";
-import React, { useCallback } from "react";
-import { Quiz } from "../_components/quiz";
-import { professionalQuiz } from "@/app/_data/Aptitude/Data";
-import { GkStore, useGkStore } from "@/lib/store";
+import React from "react";
+import { QuizCategory } from "@/app/quiz/_components/kids-quiz-category";
+import { ProfessionalQuizCategoryData } from "@/app/quiz/professional/_data/professional-quiz-category-data";
 
-const ProfessionalQuiz = () => {
-  const increaseScore = useGkStore((state: GkStore) => state.increaseScore);
-  const handleScoreIncrease = useCallback(() => {
-    increaseScore();
-  }, [increaseScore]);
+const KidsQuiz = () => {
   return (
-    <>
-      <Quiz data={professionalQuiz} onScoreIncrease={handleScoreIncrease} />;
-    </>
+    <div className="w-[100vw] h-[100vh]">
+      <QuizCategory
+        categories={ProfessionalQuizCategoryData}
+        heading={"Explore MindSpark's Professionals Quizzes"}
+      ></QuizCategory>
+    </div>
   );
 };
 
-export default ProfessionalQuiz;
+export default KidsQuiz;

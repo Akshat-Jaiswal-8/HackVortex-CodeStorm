@@ -15,8 +15,8 @@ export const Sidebar = ({ data }: SidebarProps): React.ReactNode => {
         "w-full col-span-1 border-r border-dotted border-slate-600 overflow-y-scroll"
       }
     >
-      <CurrentScore />
       <Timer />
+      <CurrentScore />
       <QuestionsPalette data={data} />
     </div>
   );

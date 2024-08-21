@@ -1,14 +1,14 @@
 import React from "react";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { motion } from "framer-motion";
-import { FeatureDataProps } from "@/app/(home)/_data/feature-data";
+import { KidsQuizCategoryDataProps } from "@/app/quiz/kids/_data/kids-quiz-category-data";
+import { QuizHoverEffect } from "@/app/quiz/_components/kids-hover-effect";
 
-interface FeaturesProps {
-  features: FeatureDataProps[];
+interface QuizCategory {
+  categories: KidsQuizCategoryDataProps[];
   heading: string;
 }
 
-export const Features = ({ features, heading }: FeaturesProps) => {
+export const QuizCategory = ({ categories, heading }: QuizCategory) => {
   return (
     <section className={"container mt-20"}>
       <div>
@@ -33,7 +33,7 @@ export const Features = ({ features, heading }: FeaturesProps) => {
             ease: "easeInOut",
           }}
         >
-          <HoverEffect items={features} />
+          <QuizHoverEffect items={categories} />
         </motion.div>
       </div>
     </section>

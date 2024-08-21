@@ -28,8 +28,13 @@ const Timer = (props: any) => {
   return (
     <div>
       {minutes === 0 && seconds === 0 ? null : (
-        <h1 className="font-bold text-5xl text-center">
-          {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+        <h1
+          className={"text-slate-300 text-4xl font-semibold pl-2 py-4 border-b"}
+        >
+          Time left :
+          <span className={"ml-2 text-yellow-500"}>
+            {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+          </span>
         </h1>
       )}
     </div>

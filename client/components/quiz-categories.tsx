@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HoverEffect } from "@/components/ui/card-hover-effext";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { quizCategories } from "@/app/(home)/_data/quiz-categories";
 
 const QuizCategories = () => {

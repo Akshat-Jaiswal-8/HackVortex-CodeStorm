@@ -1,11 +1,10 @@
-"use client";
 import React, { useCallback } from "react";
-import { Quiz } from "@/app/quiz/_components/quiz";
 import { DataStore, useDataStore } from "@/lib/store";
-import { generalKnowledge } from "@/app/_data/general-knowledge-data";
 import { Sidebar } from "@/app/quiz/_components/sidebar";
+import { Quiz } from "@/app/quiz/_components/quiz";
+import { quizDataProps } from "@/types/quiz-data";
 
-const Page = () => {
+export const MainQuiz = ({ quizData }: { quizData: quizDataProps[] }) => {
   const increaseScore = useDataStore((state: DataStore) => state.increaseScore);
   const handleScoreIncrease = useCallback(() => {
     increaseScore();
@@ -13,10 +12,8 @@ const Page = () => {
 
   return (
     <>
-      <Sidebar data={generalKnowledge} />
-      <Quiz data={generalKnowledge} onScoreIncrease={handleScoreIncrease} />
+      <Sidebar data={quizData} />
+      <Quiz data={quizData} onScoreIncrease={handleScoreIncrease} />
     </>
   );
 };
-
-export default Page;

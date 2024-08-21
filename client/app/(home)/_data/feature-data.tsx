@@ -8,8 +8,9 @@ import {
   Star,
   Timer,
 } from "lucide-react";
+import React from "react";
 
-interface FeatureDataProps {
+export interface FeatureDataProps {
   title: string;
   icon: React.JSX.Element;
   description: string;

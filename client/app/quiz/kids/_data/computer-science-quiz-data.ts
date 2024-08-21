@@ -1,6 +1,6 @@
 import { quizDataProps } from "@/types/quiz-data";
 
-export const computerScience: quizDataProps[] = [
+export const computerScienceQuizData: quizDataProps[] = [
   {
     question: "Who was the father of computer?",
     answers: [

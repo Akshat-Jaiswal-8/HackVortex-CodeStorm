@@ -1,14 +1,9 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { redirect } from "next/navigation";
 
 const quizPage = (): React.ReactNode => {
-  return (
-    <Link href={"/quiz/general-knowledge-quiz"}>
-      <Button>General Knowledge quiz</Button>
-    </Link>
-  );
+  return redirect("/quiz/kids");
 };
 
 export default quizPage;

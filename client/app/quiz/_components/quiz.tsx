@@ -26,6 +26,7 @@ export const Quiz = ({
   const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
   const [finished, setFinished] = useState<boolean>(false);
 
+  const score = useDataStore((state) => state.score);
   const setCorrect = useDataStore((state: DataStore) => state.setCorrect);
   const setWrong = useDataStore((state: DataStore) => state.setWrong);
   const setSkipped = useDataStore((state: DataStore) => state.setSkipped);
@@ -144,7 +145,9 @@ export const Quiz = ({
           </div>
         </motion.div>
       ) : (
-        ""
+        <div>
+          <h1 className={"text-4xl"}>Your Score is : {score}</h1>
+        </div>
       )}
     </div>
   );
